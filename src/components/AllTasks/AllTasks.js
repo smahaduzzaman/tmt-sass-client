@@ -6,7 +6,7 @@ const AllTasks = () => {
     console.log(allTasks)
 
     useEffect(() => {
-        fetch('http://localhost:5000/tasks')
+        fetch('https://tmt-sass-server.vercel.app/tasks')
             .then(res => res.json())
             .then(data => {
                 console.log(data);
@@ -18,12 +18,7 @@ const AllTasks = () => {
     }, [])
 
     return (
-        <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(3, 1fr)',
-            gridGap: '20px',
-            padding: '20px',
-        }}>
+        <div className='tasks'>
             {
                 allTasks.map(task => <SingleTask
                     key={task._id}

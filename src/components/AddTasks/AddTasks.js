@@ -27,7 +27,7 @@ const AddTask = () => {
         console.log(newTask);
         setAddTasks(newTask);
 
-        fetch('http://localhost:5000/add-task', {
+        fetch('https://tmt-sass-server.vercel.app/add-task', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -46,13 +46,11 @@ const AddTask = () => {
     }
 
     return (
-        <form onSubmit={handleAddTask} style={{
-            marginTop: '30px',
-        }}>
+        <form onSubmit={handleAddTask} className="form-container" style={{ marginTop: "2rem" }}>
             <input type="text" name='taskName' placeholder="Your task name" /> <br /><br />
             <input type="date" name='date' /><br /><br />
-            Start Time: <input type="time" name='startTime' />
-            End Time: <input type="time" name='endTime' /><br /><br />
+            Start Time: <input type="time" name='startTime' style={{ marginRight: "0.5rem" }} />
+            End Time: <input type="time" name='endTime' className='endTime' /><br /><br />
             Task Duration: <input type="text" name='duration' placeholder="Duration" /><br /><br />
             <input type="text" name='location' placeholder="Location" /><br /><br />
             <input type="text" name='addNote' placeholder="Add Notes" /><br /><br />

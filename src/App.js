@@ -1,9 +1,10 @@
 // import logo from './logo.svg';
-import './App.scss';
+import './App.css';
 import { RouterProvider } from 'react-router-dom';
 import router from './Routes/Routes';
 import { useState } from 'react';
 import './style.css'
+import "./sass/main.scss"
 
 function App({ children }) {
   const [darkMode, setDarkMode] = useState(false);

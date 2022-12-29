@@ -14,7 +14,7 @@ const SingleTask = ({ task }) => {
 
     const handleDeleteTask = (id) => {
         console.log(id);
-        fetch(`http://localhost:5000/tasks/${id}`, {
+        fetch(`https://tmt-sass-server.vercel.app/tasks/${id}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',
@@ -41,13 +41,16 @@ const SingleTask = ({ task }) => {
             textAlign: 'start',
             width: '300px',
         }}>
-            <div>
+            <div style={{
+                marginBottom: '10px',
+            }}>
                 <h2>{task.taskName}</h2>
-                <span>Date: {task.date}</span>
+                <p>Date: {task.date}</p>
             </div>
             <div style={{
                 display: 'flex',
                 justifyContent: 'space-between',
+                marginBottom: '10px',
             }}>
                 <p>Start Time: {task.startTime}</p>
                 <p>End Time: {task.endTime}</p>
@@ -55,16 +58,18 @@ const SingleTask = ({ task }) => {
             <div style={{
                 display: 'flex',
                 justifyContent: 'space-between',
+                marginBottom: '10px',
             }}>
                 <p>Duration: {task.duration}</p>
                 <p>Location: {task.location}</p>
             </div>
-            <div>
+            <div style={{ marginBottom: "10px" }}>
                 <p>{task.addNote}</p>
             </div>
             <div style={{
                 display: 'flex',
                 justifyContent: 'start',
+                marginBottom: '10px',
             }}>
                 <button style={{ marginRight: '10px' }}>Details</button>
                 {/* <button onClick={() => handleUpdateTask(task)} style={{ marginRight: '10px' }}>Edit</button> */}

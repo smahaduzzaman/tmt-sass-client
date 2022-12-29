@@ -12,27 +12,12 @@ const Navbar = () => {
     }
 
     return (
-        <div style={{
-            display: 'flex',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-            // padding: '0 10px',
-            // backgroundColor: 'lightblue',
-            backgroundColor: '#ccc',
-            color: 'white',
-            height: '50px'
-        }}>
-            <div>
+        <div className='navbar'>
+            <div className='brand'>
                 <a href="/">tmt</a>
             </div>
             <div>
-                <ul style={{
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    alignItems: 'center',
-                    listStyle: 'none',
-                    width: '300px'
-                }}>
+                <ul className='nav-list1'>
                     <li><a href="/">Home</a></li>
                     <li><a href="/add-task">Add Task</a></li>
                     <li><a href="/my-task">My Task</a></li>
@@ -41,21 +26,13 @@ const Navbar = () => {
                 </ul>
             </div>
             <div>
-                <ul style={{
-                    display: 'flex',
-                    justifyContent: 'space-around',
-                    alignItems: 'center',
-                    listStyle: 'none',
-                    width: '300px'
-                }}>
+                <ul className='nav-list2'>
                     <li><a href="/login">Login</a></li>
                     <li><a href="/register">Register</a></li>
                     <li><a onClick={handleLogOut} href="/">Logout</a></li>
                     <li><a href="/register"><FaUserCircle /></a></li>
                 </ul>
             </div>
-
-
         </div>
     );
 };

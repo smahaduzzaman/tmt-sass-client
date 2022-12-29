@@ -35,7 +35,7 @@ const router = createBrowserRouter([
                 path: "/edit-task/:id",
                 element: <EditTask></EditTask>,
                 loader: ({ params }) => {
-                    return fetch(`http://localhost:5000/tasks`)
+                    return fetch(`https://tmt-sass-server.vercel.app/tasks`)
                         .then(res => res.json())
                         .then(data => data.find(task => task._id === params.id)
                         );

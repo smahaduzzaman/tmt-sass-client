@@ -1,0 +1,140 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    -webkit-animation: App-logo-spin infinite 20s linear;
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@-webkit-keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/*# sourceMappingURL=App.css.map */
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  align-items: center;
+  padding: 0 2rem;
+  background-color: #ccc;
+  padding: 1rem 0;
+}
+
+.brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #000;
+}
+
+.brand a {
+  text-decoration: none;
+  color: #000;
+}
+
+.nav-list1 {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-list1 li {
+  list-style: none;
+}
+
+.nav-list1 li a {
+  text-decoration: none;
+  color: #000;
+}
+
+.nav-list2 {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-list2 li {
+  list-style: none;
+}
+
+.nav-list2 li a {
+  text-decoration: none;
+  color: #000;
+}
+
+@media screen and (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .nav-list1 {
+    flex-direction: column;
+  }
+
+  .nav-list2 {
+    flex-direction: column;
+  }
+}
+
+.form-container {
+  padding: 20px, 0;
+}
+
+.form-container input {
+  padding: 5px 20px;
+}
+
+.tasks {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 2rem 0;
+}
+
+@media screen and (max-width: 600px) {
+  .tasks {
+    grid-template-columns: repeat(1, 1fr);
+    margin-right: 0;
+  }
+}
