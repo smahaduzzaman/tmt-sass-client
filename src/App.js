@@ -1,10 +1,10 @@
-// import logo from './logo.svg';
-// import './App.css';
+import './style.css'
+import "./sass/main.scss"
 import { RouterProvider } from 'react-router-dom';
 import router from './Routes/Routes';
 import { useState } from 'react';
-import './style.css'
-import "./sass/main.scss"
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App({ children }) {
   const [darkMode, setDarkMode] = useState(false);
@@ -24,6 +24,10 @@ function App({ children }) {
         <RouterProvider router={router}>
           {children}
         </RouterProvider>
+        <ToastContainer
+          position="top-center"
+          autoClose={3000}
+        />
       </div>
     </div>
   );

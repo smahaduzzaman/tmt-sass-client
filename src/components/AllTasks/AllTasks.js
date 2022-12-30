@@ -1,12 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+import { AuthContext } from '../../contexts/AuthProvier';
 import SingleTask from '../SingleTask/SingleTask';
 
 const AllTasks = () => {
     const [allTasks, setAllTasks] = useState([]);
+    const { user } = useContext(AuthContext);
     console.log(allTasks)
 
     useEffect(() => {
-        fetch('https://tmt-sass-server.vercel.app/tasks')
+        fetch(`https://tmt-sass-server.vercel.app/tasks/${user?.email}`)
             .then(res => res.json())
             .then(data => {
                 console.log(data);
@@ -15,7 +17,7 @@ const AllTasks = () => {
             .catch(err => {
                 console.log(err);
             });
-    }, [])
+    }, [user?.email])
 
     return (
         <div className='tasks-container'>

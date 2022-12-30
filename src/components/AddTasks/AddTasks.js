@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
+import { AuthContext } from '../../contexts/AuthProvier';
 
 const AddTask = () => {
+    const { user } = useContext(AuthContext);
     const [addTasks, setAddTasks] = useState([]);
 
     const handleAddTask = (event) => {
@@ -13,6 +15,7 @@ const AddTask = () => {
         const location = event.target.location.value;
         const addNote = event.target.addNote.value;
         const image = event.target.image.files[0];
+
         console.log(taskName, date, startTime, endTime, duration, location, addNote, image);
         const newTask = {
             taskName: taskName,
@@ -22,7 +25,8 @@ const AddTask = () => {
             duration: duration,
             location: location,
             addNote: addNote,
-            image: image
+            image: image,
+            email: user?.email
         }
         console.log(newTask);
         setAddTasks(newTask);

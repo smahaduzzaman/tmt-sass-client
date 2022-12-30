@@ -27,10 +27,15 @@ const Navbar = () => {
             </div>
             <div className='menu-right'>
                 <ul>
-                    <li><a href="/login">Login</a></li>
-                    <li><a href="/register">Register</a></li>
-                    <li><a onClick={handleLogOut} href="/">Logout</a></li>
-                    <li><a href="/register"><FaUserCircle /></a></li>
+                    {
+                        user?.uid ?
+                            <li><a onClick={handleLogOut} href="/">Logout</a></li>
+                            :
+                            <>
+                                <li><a href="/login">Login</a></li>
+                                <li><a href="/register">Register</a></li>
+                            </>
+                    }
                 </ul>
             </div>
         </div>

@@ -1,0 +1,61 @@
+.login-container {
+    margin: 20px auto;
+    padding: 3rem;
+
+    form {
+        margin-top: 10px;
+
+        input {
+            padding: 0.5rem 0.8rem;
+            border: 1px solid $secondary;
+            border-radius: 5px;
+            width: 30%;
+
+            &:focus {
+                outline: none;
+            }
+
+            &:hover {
+                border: 1px solid $primary;
+                background-color: $secondary;
+                color: $white;
+            }
+
+        }
+    }
+
+    button {
+        padding: 0.5rem 0.8rem;
+        border: 1px solid $secondary;
+        border-radius: 5px;
+        background-color: $primary;
+        color: $black;
+        font-weight: 600;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $secondary;
+            color: $white;
+        }
+    }
+
+    .to-register {
+        margin-top: 20px;
+        text-align: center;
+
+        a {
+            text-decoration: none;
+            font-weight: 600;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .login-container {
+        form {
+            input {
+                width: 100%;
+            }
+        }
+    }
+}

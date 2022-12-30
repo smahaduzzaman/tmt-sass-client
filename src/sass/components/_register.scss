@@ -1,20 +1,13 @@
-.login-container {
-    margin: 2rem 0;
-    width: 50%;
-    height: 500px;
+.register-container {
     margin: 20px auto;
-    // background-color: $primary;
     padding: 3rem;
-
     form {
-        width: 100%;
         margin-top: 10px;
-
         input {
             padding: 0.5rem 0.8rem;
             border: 1px solid $secondary;
             border-radius: 5px;
-            width: 60%;
+            width: 30%;
 
             &:focus {
                 outline: none;
@@ -41,6 +34,26 @@
         &:hover {
             background-color: $secondary;
             color: $white;
+        }
+    }
+.to-login {
+    margin-top: 20px;
+    text-align: center;
+
+    a {
+        text-decoration: none;
+        font-weight: 600;
+
+    }
+}
+}
+
+@media screen and (max-width: 600px) {
+    .register-container {
+        form {
+            input {
+                width: 100%;
+            }
         }
     }
 }

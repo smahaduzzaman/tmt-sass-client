@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { toast } from 'react-toastify';
 
 const SingleTask = ({ task }) => {
     const [updatedTask, setUpdatedTask] = useState({
@@ -11,6 +12,21 @@ const SingleTask = ({ task }) => {
         // addNote: task.addNote,
         // image: task.image,
     });
+
+    const handleUpdateTask = (id) => {
+        console.log(id);
+        fetch(`https://tmt-sass-server.vercel.app/tasks/${id}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ completed: true }),
+        })
+            .then((res) => res.json())
+            .then((result) => {
+                console.log(result);
+            });
+    }
 
     const handleDeleteTask = (id) => {
         console.log(id);
@@ -30,7 +46,6 @@ const SingleTask = ({ task }) => {
 
     };
 
-
     return (
         <div className='single-task'>
             <div className='task-title'>
@@ -49,11 +64,11 @@ const SingleTask = ({ task }) => {
                 <p>{task.addNote}</p>
             </div>
             <div className='task-buttons'>
-                <button>Details</button>
+                <a href="/details"><button>Details</button></a>
                 {/* <button onClick={() => handleUpdateTask(task)} style={{ marginRight: '10px' }}>Edit</button> */}
                 <a href={`/edit-task/${task._id}`}><button>Edit</button></a>
                 <button onClick={() => handleDeleteTask(task._id)}>Delete</button>
-                {/* <button>Completed</button> */}
+                <button onClick={() => handleUpdateTask(task._id)}>Completed</button>
             </div>
         </div>
     );

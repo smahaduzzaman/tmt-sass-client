@@ -8,6 +8,8 @@ import Login from "../components/Login/Login";
 import Register from "../components/Register/Register";
 import Main from "../Layouts/Main";
 import EditTask from "../components/EditTask/EditTask";
+import PrivateRoute from "./PrivateRoute";
+import Details from "../components/Details/Details";
 
 
 const router = createBrowserRouter([
@@ -25,11 +27,13 @@ const router = createBrowserRouter([
             },
             {
                 path: "/add-task",
-                element: <AddTask></AddTask>
+                // element: <AddTask></AddTask>
+                element: <PrivateRoute><AddTask></AddTask></PrivateRoute>
             },
             {
                 path: "/my-task",
-                element: <MyTask></MyTask>
+                // element: <MyTask></MyTask>
+                element: <PrivateRoute><MyTask></MyTask></PrivateRoute>
             },
             {
                 path: "/edit-task/:id",
@@ -43,7 +47,13 @@ const router = createBrowserRouter([
             },
             {
                 path: "/completed-task",
-                element: <CompletedTask></CompletedTask>
+                // element: <CompletedTask></CompletedTask>
+                element: <PrivateRoute><CompletedTask></CompletedTask></PrivateRoute>
+            },
+            {
+                path: "/details",
+                // element: <Details></Details>,
+                element: <PrivateRoute><Details></Details></PrivateRoute>
             },
             {
                 path: "/login",
