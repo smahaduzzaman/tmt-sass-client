@@ -1,0 +1,71 @@
+.single-task {
+    border: 1px solid gray;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 20px;
+    box-shadow: 5px 5px 5px lightgray;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: $black;
+    text-align: start;
+
+    .task-title {
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 0.8rem;
+            font-weight: 400;
+            margin-bottom: 10px;
+        }
+    }
+
+    .task-time {
+
+        p {
+            font-size: 1rem;
+            font-weight: 400;
+        }
+    }
+
+    .duration-location {
+
+        p {
+            font-size: 1rem;
+            font-weight: 400;
+        }
+    }
+
+    .note {
+        margin-bottom: 10px;
+
+        p {
+            font-size: 0.9rem;
+            font-weight: 400;
+            margin-top: 10px;
+        }
+    }
+
+    .task-buttons {
+
+        button {
+            padding: 5px 10px;
+            border-radius: 5px;
+            border: none;
+            background-color: $primary;
+            color: $black;
+            font-size: 1rem;
+            font-weight: 400;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            margin: 5px 5px 0 0;
+
+            &:hover {
+                background-color: $secondary;
+                color: $white;
+            }
+        }
+    }
+}

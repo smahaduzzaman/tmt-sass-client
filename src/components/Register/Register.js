@@ -52,8 +52,8 @@ const Register = () => {
 
 
     return (
-        <div>
-            <h1>Register</h1>
+        <div className='login-container'>
+            <h2>Register</h2>
             <form onSubmit={handleSignUp}>
                 <input type="text" name="name" id="" placeholder='Enter name' required /><br /><br />
                 <input type="email" name="email" id="" placeholder='Enter email' required /><br /><br />

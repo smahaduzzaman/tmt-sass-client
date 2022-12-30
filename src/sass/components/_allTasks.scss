@@ -1,0 +1,14 @@
+.tasks-container {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0.5rem;
+    margin: 2rem auto;
+}
+
+@media screen and (max-width: 600px) {
+    .tasks-container {
+        display: flex;
+        flex-direction: column;
+    }
+}

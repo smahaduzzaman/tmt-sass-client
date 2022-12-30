@@ -41,13 +41,9 @@ const Login = () => {
             })
     }
 
-
-
     return (
-        <div style={{
-            height: '100vh',
-        }}>
-            <h1>Login</h1>
+        <div className='login-container'>
+            <h2>Login</h2>
             <form onSubmit={handleLogin}>
                 <input type="email" name="email" id="" placeholder='Enter email' required /><br /><br />
                 <input type="password" name="password" id="" placeholder='Enter Password' required /><br /><br />

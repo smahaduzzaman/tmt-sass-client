@@ -42,7 +42,10 @@ const EditTask = () => {
     };
 
     return (
-        <form>
+        <form
+            className='form-container'
+            style={{ margin: '20px 0' }}
+        >
             <input
                 onChange={handleChange}
                 type="text"
@@ -96,6 +99,8 @@ const EditTask = () => {
             // onChange={handleChange}
             // defaultValue={task.image ? task.image : ""}
             /><br /><br />
+            {/* <button onClick={() => handleUpdateTask(task)} style={{ marginRight: '10px' }}>Edit</button> */}
+            {/* <button>Completed</button> */}
             <input
                 type="submit"
                 value="Save Changes"

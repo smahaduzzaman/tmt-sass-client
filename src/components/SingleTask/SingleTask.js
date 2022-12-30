@@ -24,57 +24,35 @@ const SingleTask = ({ task }) => {
             .then((result) => {
                 if (result) {
                     alert('Task deleted successfully');
+                    window.location.reload();
                 }
             });
-        // window.location.reload();
+
     };
 
 
     return (
-        <div style={{
-            border: '1px solid gray',
-            borderRadius: '5px',
-            padding: '20px',
-            margin: '20px',
-            boxShadow: '5px 5px 5px lightgray',
-            backgroundColor: 'rgba(255, 255, 255, 0.5)',
-            textAlign: 'start',
-            width: '300px',
-        }}>
-            <div style={{
-                marginBottom: '10px',
-            }}>
+        <div className='single-task'>
+            <div className='task-title'>
                 <h2>{task.taskName}</h2>
                 <p>Date: {task.date}</p>
             </div>
-            <div style={{
-                display: 'flex',
-                justifyContent: 'space-between',
-                marginBottom: '10px',
-            }}>
-                <p>Start Time: {task.startTime}</p>
-                <p>End Time: {task.endTime}</p>
+            <div className='task-time'>
+                <p>- Start Time: {task.startTime}</p>
+                <p>- End Time: {task.endTime}</p>
             </div>
-            <div style={{
-                display: 'flex',
-                justifyContent: 'space-between',
-                marginBottom: '10px',
-            }}>
-                <p>Duration: {task.duration}</p>
-                <p>Location: {task.location}</p>
+            <div className='duration-location'>
+                <p>- Duration: {task.duration}</p>
+                <p>- Location: {task.location}</p>
             </div>
-            <div style={{ marginBottom: "10px" }}>
+            <div className='note'>
                 <p>{task.addNote}</p>
             </div>
-            <div style={{
-                display: 'flex',
-                justifyContent: 'start',
-                marginBottom: '10px',
-            }}>
-                <button style={{ marginRight: '10px' }}>Details</button>
+            <div className='task-buttons'>
+                <button>Details</button>
                 {/* <button onClick={() => handleUpdateTask(task)} style={{ marginRight: '10px' }}>Edit</button> */}
-                <a href={`/edit-task/${task._id}`}><button style={{ marginRight: '10px' }}>Edit</button></a>
-                <button onClick={() => handleDeleteTask(task._id)} style={{ marginRight: '10px' }}>Delete</button>
+                <a href={`/edit-task/${task._id}`}><button>Edit</button></a>
+                <button onClick={() => handleDeleteTask(task._id)}>Delete</button>
                 {/* <button>Completed</button> */}
             </div>
         </div>

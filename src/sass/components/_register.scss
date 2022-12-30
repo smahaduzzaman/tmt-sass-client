@@ -1,0 +1,46 @@
+.login-container {
+    margin: 2rem 0;
+    width: 50%;
+    height: 500px;
+    margin: 20px auto;
+    // background-color: $primary;
+    padding: 3rem;
+
+    form {
+        width: 100%;
+        margin-top: 10px;
+
+        input {
+            padding: 0.5rem 0.8rem;
+            border: 1px solid $secondary;
+            border-radius: 5px;
+            width: 60%;
+
+            &:focus {
+                outline: none;
+            }
+
+            &:hover {
+                border: 1px solid $primary;
+                background-color: $secondary;
+                color: $white;
+            }
+
+        }
+    }
+
+    button {
+        padding: 0.5rem 0.8rem;
+        border: 1px solid $secondary;
+        border-radius: 5px;
+        background-color: $primary;
+        color: $black;
+        font-weight: 600;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $secondary;
+            color: $white;
+        }
+    }
+}

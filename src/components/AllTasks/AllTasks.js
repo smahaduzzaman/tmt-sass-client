@@ -18,7 +18,7 @@ const AllTasks = () => {
     }, [])
 
     return (
-        <div className='tasks'>
+        <div className='tasks-container'>
             {
                 allTasks.map(task => <SingleTask
                     key={task._id}

@@ -1,7 +1,2 @@
-@import "base/base";
-// import components
-@import "components/home";
-@import "components/navbar";
-@import "components/addTask";
-@import "components/login";
-@import "components/register";
+@import 'base/all';
+@import "components/all";
